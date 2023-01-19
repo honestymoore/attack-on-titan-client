@@ -32,6 +32,16 @@ export const onShowCharacterSuccess = (character) => {
         <p>${character.class}</p>
         <p>${character.strength}</p>
         <p>${character._id}</p>
+
+        <form data-id="${character._id}">
+            <input type="text" name="firstName" value="${character.firstName}">
+            <input type="text" name="lastName" value="${character.lastName}">
+            <input type="text" name="class" value="${character.class}">
+            <input type="number" name="strength" value="${character.strength}">
+            <input type="submit" value="Update Character">
+        </form>
+
+        <button data-id="${character._id}">Delete Character</button> 
     `
     showCharacterContainer.appendChild(div)
 }
